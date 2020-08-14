@@ -23,11 +23,17 @@ world.load_graph(room_graph)
 # Print an ASCII map
 world.print_rooms()
 
+# For me
+from dft import bfs, traverse
+starting_id = world.starting_room.id
+
+# End For me
+
 player = Player(world.starting_room)
 
 # Fill this out with directions to walk
 # traversal_path = ['n', 'n']
-traversal_path = []
+traversal_path = traverse(world,starting_id,len(room_graph))
 
 
 
